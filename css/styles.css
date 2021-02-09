@@ -1,0 +1,409 @@
+* { 
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1400px;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.navbar-brand {
+    margin: 0px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    left: -550px;
+    width: 600px;
+    max-height: 300px;
+    overflow: scroll;
+}
+
+.dropdown-menu .cart-item-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cart-item {
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+
+.cart-item-detail {
+    margin: 10px;
+}
+
+.cart-item .price-value {
+    font-size: 24px;
+    color: #003177;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 700;
+    display: inline-block;
+    line-height: 1;
+}
+
+.cart-item .price-currency {
+    font-size: 16px;
+    color: #003177;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.cart-item .cart-id {
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #858585;
+    max-height: 15px;
+    overflow: hidden;
+}
+
+.cart-total .price-total {
+    margin-left: 10px;
+    font-size: 20px;
+    color: #003177;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 500;
+    display: inline-block;
+    line-height: 1;
+}
+
+.cart-total .price-value {
+    font-size: 22px;
+    color: #003177;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 700;
+    display: inline-block;
+    line-height: 1;
+}
+
+.cart-total .price-currency {
+    font-size: 16px;
+    color: #003177;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.center-image {
+    text-align: center;
+}
+
+#category-list {
+    width: 100%;
+}
+
+.category-large {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    
+}
+
+.category-large .nav-link:hover {
+    padding: 7px;
+    border: 1px solid blue;
+}
+
+.title {
+    margin: 15px 0 15px 0;
+}
+
+.carousel {
+    background: #FAFAFA;
+    height: 300px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.flickity-button {
+    display: none;
+}
+
+.carousel-cell {
+    width: 100%;
+    height: 300px;
+    margin-right: 10px;
+    background: #8C8;
+    border-radius: 5px;
+}
+
+.carousel-cell:before {
+    display: block;
+    text-align: center;
+    content: "Banners";
+    line-height: 300px;
+    font-size: 80px;
+    color: white;
+}
+
+.product-column {
+    margin-bottom: 25px;
+    padding: 0 10px 0 10px;
+}
+
+.single-product {
+    border: 1px solid black;
+    padding: 15px;
+    height: 275px;
+}
+
+#search-page-content {
+    margin: 20px 0 0 0;
+}
+
+.search-page-product-column {
+    margin-bottom: 25px;
+    padding: 0 0 0 15px;
+}
+
+.search-page-single-product {
+    border: 1px solid black;
+    padding: 15px;
+    height: 275px;
+}
+
+#product-carousel {
+    height: 200px;
+}
+
+#product-carousel > .flickity-viewport {
+    height: 200px !important;
+}
+
+#product-carousel > .flickity-slider {
+    height: 200px !important;
+}
+
+.product-cell {
+    width: 20%;
+}
+
+.carousel-product {
+    border: 1px solid black;
+    padding: 15px;
+    height: 200px;
+}
+
+a.product-link {
+    text-decoration: none;
+}
+
+.product-code {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #858585;
+    max-height: 15px;
+    overflow: hidden;
+}
+
+.product-detail .product-code {
+    font-size: 14px;
+}
+
+.product-name {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #000;
+    height: 34px;
+    overflow: hidden;
+}
+
+.product-detail .product-name {
+    font-size: 18px;
+}
+
+.product-price .price-value {
+    font-size: 32px;
+    color: #003177;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: -.5px;
+    display: inline-block;
+    line-height: 1;
+}
+
+.product-price .price-currency {
+    font-size: 12px;
+    color: #003177;
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1;
+}
+
+.product-detail .product-price .price-value {
+    font-size: 40px;
+}
+
+.footer {
+    background-color: #003177;
+    color: #fff;
+}
+
+.product-detail-image {
+    padding: 20px;
+}
+
+.product-detail-page {
+    margin: 20px 0 20px 0;
+    border: 1px solid black;
+}
+
+.detail-column {
+    background-color: #F5F5DC;
+    height: 340px;
+}
+
+.product-detail {
+    margin-top: 10px;
+}
+
+.rating {
+    float: right;
+}
+
+.add-cart-btn {
+    margin-top: 15px;
+}
+
+.remove-cart-btn {
+    width: 85px;
+    height: 35px;
+}
+
+.filter-column {
+    background-color: gray;
+    height: 200px;
+}
+
+.cart-row {
+    width: 100%;
+    margin: 20px 0 20px 0;
+}
+
+.cart-block-list {
+    width: 100%;
+}
+
+.cart-block-list .cart-item {
+    width: 100%;
+}
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+    #visible-bar {
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+
+    #hidden-bar {
+        margin: 0px;
+        padding: 0px;
+        width: 0px;
+        height: 0px;
+        border: 0px;
+    }
+
+    #hidden-bar .form-control {
+        margin: 0px;
+        padding: 0px;
+        width: 0px;
+        height: 0px;
+        border: 0px;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+}
+  
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 1000px;
+    }
+
+    #visible-bar {
+        width: 600px;
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+
+    #hidden-bar {
+        margin: 0px;
+        padding: 0px;
+        width: 0px;
+        height: 0px;
+        border: 0px;
+    }
+
+    #hidden-bar .form-control {
+        margin: 0px;
+        padding: 0px;
+        width: 0px;
+        height: 0px;
+        border: 0px;
+    }
+
+    .product-cell {
+        width: 25%;
+    }
+}
+  
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+
+    #visible-bar {
+        width: 400px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    #hidden-bar {
+        margin: 0px;
+        padding: 0px;
+        width: 0px;
+        height: 0px;
+        border: 0px;
+    }
+
+    #hidden-bar .form-control {
+        margin: 0px;
+        padding: 0px;
+        width: 0px;
+        height: 0px;
+        border: 0px;
+    }
+
+    .product-cell {
+        width: 33.3%;
+    }
+}
+  
+/********** Extra-Small devices only **********/
+@media (max-width: 767px) {
+    
+    .navbar-brand {
+        margin-left: 25px;
+    }
+
+    #hidden-bar {
+        margin-top: 5px;
+    }
+
+    .product-cell {
+        width: 50%;
+    }
+
+    h3 {
+        font-size: 1.4em;
+    }
+}

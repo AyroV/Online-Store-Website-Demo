@@ -1,0 +1,173 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demo E-Commerce Site</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/flickity.css">
+    <link rel="stylesheet" href="../css/styles.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+          <button class="navbar-toggler d-md-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <a class="navbar-brand" href="../index.html">Company Name</a>
+
+          <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#hidden-bar" aria-controls="hidden-bar" aria-expanded="false" aria-label="Toggle navigation" id="hidden-bar-button">
+            <img src="../images/search.svg">
+          </button>
+
+          <div class="collapse navbar-collapse input-group d-none d-md-block d-lg-block d-xl-block justify-content-between" id="visible-bar">
+            <input type="text" class="form-control" placeholder="Search Products" id="searchbarOne">
+            <div class="input-group-append">
+              <button class="btn btn-secondary" type="button" id="searchbarButton" onclick="searchbar('searchbarOne')">
+                <img src="../images/search.svg">
+              </button>
+            </div>
+          </div>
+
+          
+          <div class="dropdown" id="cart-button">
+            <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="location.href='../cart-page.html'">
+              <img src="../images/cart4.svg">
+            </button>
+            <div class="dropdown-menu" id="cart-block" aria-labelledby="dropdownMenuButton">
+              <ul class="cart-item-list" id="cart-list">
+                
+              </ul>  
+              <div class="cart-total">
+                <span class="price-total">TOTAL:</span>
+                <span class="price-value">0.00</span>
+                <span class="price-currency">$</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="collapse navbar-collapse input-group d-md-none" id="hidden-bar">
+            <input type="text" class="form-control d-md-none" placeholder="Search Products" id="searchbarTwo">
+            <div class="input-group-append d-md-none">
+              <button class="btn btn-secondary d-md-none" type="button" onclick="searchbar('searchbarTwo')">
+                <img src="../images/search.svg">
+              </button>
+            </div>
+          </div>
+
+          <div class="collapse navbar-collapse d-md-none" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto d-md-none" id="category-list">
+              <li class="nav-item active">
+                <a class="nav-link" href="#" onclick="categoryClick('men clothing')">M. Clothing</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#" onclick="categoryClick('women clothing')">W. Clothing</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#" onclick="categoryClick('jewelery')">Jewelery</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#" onclick="categoryClick('electronics')">Electronics</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Place H.</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Place H.</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Place H.</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Place H.</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Place H.</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Place H.</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Place H.</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <nav class="navbar navbar-expand-lg navbar-expand-md navbar-dark bg-dark d-none d-md-block d-lg-block d-xl-block">
+        <div class="container">
+          <div class="collapse navbar-collapse" id="navbarTwo">
+            <ul class="navbar-nav mr-auto" id="category-list">
+              <li class="nav-item active category-large">
+                <a class="nav-link" href="#" onclick="categoryClick('men clothing')">M. Clothing</a>
+              </li>
+              <li class="nav-item active category-large">
+                <a class="nav-link" href="#" onclick="categoryClick('women clothing')">W. Clothing</a>
+              </li>
+              <li class="nav-item active category-large">
+                <a class="nav-link" href="#" onclick="categoryClick('jewelery')">Jewelery</a>
+              </li>
+              <li class="nav-item active category-large">
+                <a class="nav-link" href="#" onclick="categoryClick('electronics')">Electronics</a>
+              </li>
+              <li class="nav-item active category-large">
+                <a class="nav-link" href="#">Place H.</a>
+              </li>
+              <li class="nav-item active category-large">
+                <a class="nav-link" href="#">Place H.</a>
+              </li>
+              <li class="nav-item active category-large">
+                <a class="nav-link" href="#">Place H.</a>
+              </li>
+              <li class="nav-item active category-large">
+                <a class="nav-link" href="#">Place H.</a>
+              </li>
+              <li class="nav-item active category-large">
+                <a class="nav-link" href="#">Place H.</a>
+              </li>
+              <li class="nav-item active category-large">
+                <a class="nav-link" href="#">Place H.</a>
+              </li>
+              <li class="nav-item active category-large">
+                <a class="nav-link" href="#">Place H.</a>
+              </li>
+            </ul>
+          </div>
+        </div>  
+      </nav>
+    </header>
+
+    <div class="container" id="main-content">
+      <div class="row product-detail-page">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+          <div class="product-detail-image">
+            <div class="product-big-image center-image"><img src="https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg" width="300px" height="300px"></div>
+          </div>
+        </div>
+        
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 detail-column">
+          <div class="product-detail">
+            <div class="product-code">9</div>
+            <div class="product-name">WD 2TB Elements Portable External Hard Drive - USB 3.0 </div>
+            <div class="product-price">
+              <span class="price-value">64</span>
+              <span class="price-currency">$</span>
+            </div>
+            <button type="button" class="btn btn-danger add-cart-btn" onclick="add('WD 2TB Elements Portable External Hard Drive - USB 3.0 ', '64', 'fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg')">Add to Cart <img src="../images/cart4.svg"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/main-script.js"></script>
+    <script src="../js/product-page-script.js"></script>
+  </body>
+</html>
