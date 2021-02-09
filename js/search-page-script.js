@@ -7,7 +7,7 @@ var priceRangeItems = new Array();
 fetch('https://fakestoreapi.com/products')
         .then(res=>res.json())
         .then(function (data) {
-            fetch("../snippets/search-page-product-snippet.html")
+            fetch("https://ayrov.github.io/Online-Store-Website-Demo/snippets/search-page-product-snippet.html")
                 .then(resp=>resp.text())
                 .then(function(productHtml) {
 
@@ -253,7 +253,7 @@ function compareTwo(a, b) {
 }
 
 function updatePorductList() {
-    fetch("../snippets/search-page-product-snippet.html")
+    fetch("https://ayrov.github.io/Online-Store-Website-Demo/snippets/search-page-product-snippet.html")
         .then(resp=>resp.text())
         .then(function(productHtml) {
             var tempHtml = productHtml;
