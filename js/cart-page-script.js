@@ -29,7 +29,7 @@ for(var i = 0; i < cartValues.length; i++){
 }
 
 function loadCartPage() {
-    fetch("../snippets/cart-page-items-snippet.html")
+    fetch("https://ayrov.github.io/Online-Store-Website-Demo/snippets/cart-page-items-snippet.html")
         .then(resp=>resp.text())
         .then(function(data) {
             var element = document.getElementById("cart-page-list");
@@ -53,7 +53,7 @@ function loadCartPage() {
 }
 
 function loadCart() {
-    fetch("../snippets/cart-items-snippet.html")
+    fetch("https://ayrov.github.io/Online-Store-Website-Demo/snippets/cart-items-snippet.html")
         .then(resp=>resp.text())
         .then(function(data) {
             var element = document.getElementById("cart-list");

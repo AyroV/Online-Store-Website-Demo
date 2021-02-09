@@ -1,5 +1,5 @@
 ﻿function add(name, price, image) {
-    fetch("../snippets/cart-items-snippet.html")
+    fetch("https://ayrov.github.io/Online-Store-Website-Demo/snippets/cart-items-snippet.html")
         .then(resp=>resp.text())
         .then(function(data) {
             var value = parseFloat(price);
