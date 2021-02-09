@@ -114,6 +114,7 @@ function filterPriceIncreasing(deviceType) {
             relatedItems.sort(compareOne);
         }
     }
+    document.getElementById('decreasingCheck').checked = false;
     document.getElementById('decreasingCheckMobile').checked = false;
     updatePorductList();
 }
@@ -160,6 +161,7 @@ function filterPriceDecreasing(deviceType) {
             relatedItems.sort(compareTwo);
         }
     }
+    document.getElementById('increasingCheck').checked = false;
     document.getElementById('increasingCheckMobile').checked = false;
     updatePorductList();
 }
