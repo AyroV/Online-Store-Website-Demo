@@ -93,6 +93,10 @@ function searchbar(searchbarID) {
     document.location.href = "https://ayrov.github.io/Online-Store-Website-Demo/search-page.html";
 }
 
+function cartButtonClick() {
+    document.location.href = "https://ayrov.github.io/Online-Store-Website-Demo/cart-page.html";
+}
+
 var insertHtml = function (selector, html) {
     var targetElem = document.querySelector(selector);
     targetElem.innerHTML = html;
