@@ -12,7 +12,7 @@ function makeProductSliderCell(cellHTML) {
 
 function categoryClick(category) {
     sessionStorage.setItem("searchbarValue", category);
-    document.location.href = "../search-page.html";
+    document.location.href = "../Online-Store-Website-Demo/search-page.html";
 }
 
 fetch('https://fakestoreapi.com/products')
