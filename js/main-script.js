@@ -82,7 +82,7 @@ input.addEventListener("keyup", function(event) {
 
 function categoryClick(category) {
     sessionStorage.setItem("searchbarValue", category);
-    document.location.href = "../Online-Store-Website-Demo/search-page.html";
+    document.location.href = "https://ayrov.github.io/Online-Store-Website-Demo/search-page.html";
 }
 
 function searchbar(searchbarID) {
@@ -90,7 +90,7 @@ function searchbar(searchbarID) {
     var searchString = searchBar.value;
 
     sessionStorage.setItem("searchbarValue", searchString);
-    document.location.href = "../Online-Store-Website-Demo/search-page.html";
+    document.location.href = "https://ayrov.github.io/Online-Store-Website-Demo/search-page.html";
 }
 
 var insertHtml = function (selector, html) {
