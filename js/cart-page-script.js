@@ -2,12 +2,12 @@
 var cartValues = document.querySelectorAll('.cart-total .price-value');
 //localStorage.removeItem("cartValue");
 //localStorage.removeItem("cartItems");
-var cartTotal = parseFloat(localStorage.getItem("cartValue"));
+var cartTotal = parseFloat(sessionStorage.getItem("cartValue"));
 if(Number.isNaN(cartTotal)) {
     cartTotal = 0;
 }
 
-var storedCart = JSON.parse(localStorage.getItem("cartItems"));
+var storedCart = JSON.parse(sessionStorage.getItem("cartItems"));
 var cartItems = new Array();
 
 if(storedCart != null) {
@@ -82,7 +82,7 @@ function removeCartPageItem(id, price) {
     value = value - 1;
 
     cartItems.splice(value, 1);
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
 
     var element = document.getElementById("cart-page-list");
     element.innerHTML = "";
@@ -100,10 +100,10 @@ function removeItem(id, price) {
     if(cartItemCount == 0) {
         cartTotal = 0;
     }
-    localStorage.setItem("cartValue", cartTotal.toString());
+    sessionStorage.setItem("cartValue", cartTotal.toString());
 
     cartItems.splice(value, 1);
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
 
     var element = document.getElementById("cart-list");
     element.innerHTML = "";

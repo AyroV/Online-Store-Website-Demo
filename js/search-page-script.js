@@ -1,4 +1,4 @@
-var searchString = localStorage.getItem("searchbarValue");
+var searchString = sessionStorage.getItem("searchbarValue");
 
 var relatedItems = new Array();
 var tempRelatedItems = new Array();

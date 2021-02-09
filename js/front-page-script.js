@@ -11,7 +11,7 @@ function makeProductSliderCell(cellHTML) {
 }
 
 function categoryClick(category) {
-    localStorage.setItem("searchbarValue", category);
+    sessionStorage.setItem("searchbarValue", category);
     document.location.href = "../search-page.html";
 }
 

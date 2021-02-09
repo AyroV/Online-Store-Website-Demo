@@ -7,8 +7,8 @@
 
             cartItems[cartItemCount] = new Array(name, price, image);
             cartItemCount++;
-            localStorage.setItem("cartItems", JSON.stringify(cartItems));
-            localStorage.setItem("cartValue", cartTotal.toString());
+            sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
+            sessionStorage.setItem("cartValue", cartTotal.toString());
 
             var element = document.getElementById("cart-list");
             var imageString = 'https://' + image;
