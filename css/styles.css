@@ -155,7 +155,11 @@
     height: 275px;
 }
 
-#search-page-content {
+#search-page-mobile-filter-content {
+    margin: 20px 0 0 0;
+}
+
+#search-page-desktop-filter-content {
     margin: 20px 0 0 0;
 }
 
@@ -314,6 +318,21 @@ a.product-link {
   
 #scroll-top-button:hover {
 background-color: #555;
+}
+
+.search-failed-img {
+    width: 100px;
+    margin: auto;
+}
+
+.search-failed-text {
+    width: 300px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.search-failed-content {
+    margin: 50px 0 50px 0;
 }
 
 /********** Large devices only **********/

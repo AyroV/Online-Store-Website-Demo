@@ -51,6 +51,13 @@ fetch('https://fakestoreapi.com/products')
                     }
 
                     insertHtml("#search-page-list", productList);
+                    if(relatedItems.length == 0) {
+                        fetch("https://ayrov.github.io/Online-Store-Website-Demo/snippets/search-failed-snippet.html")
+                            .then(resp=>resp.text())
+                            .then(function(productHtml) {
+                                insertHtml("#search-page-content", productHtml);
+                            })
+                    }
                 })
         })
       
