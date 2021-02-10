@@ -76,20 +76,6 @@ function loadCart() {
         })
 }
 
-function removeCartPageItem(id, price) {
-    cartItemCount--;
-    var value = parseInt(id);
-    value = value - 1;
-
-    cartItems.splice(value, 1);
-    sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
-
-    var element = document.getElementById("cart-page-list");
-    element.innerHTML = "";
-    loadCartPage();
-    removeItem(id, price);
-}
-
 function removeItem(id, price) {
     cartItemCount--;
     var value = parseInt(id);
@@ -105,8 +91,13 @@ function removeItem(id, price) {
     cartItems.splice(value, 1);
     sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
 
-    var element = document.getElementById("cart-list");
-    element.innerHTML = "";
+    var cartElement = document.getElementById("cart-list");
+    cartElement.innerHTML = "";
+
+    var cartPageElement = document.getElementById("cart-page-list");
+    cartPageElement.innerHTML = "";
+
+    loadCartPage();
     loadCart();
 }
 
