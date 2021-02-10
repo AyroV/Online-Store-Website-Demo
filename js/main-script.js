@@ -98,7 +98,7 @@ function cartButtonClick() {
 }
 
 
-scrollButton = document.getElementById("scroll-top-button");
+var scrollButton = document.getElementById("scroll-top-button");
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
