@@ -3,7 +3,6 @@ Responsive e-commerce website demo with HTML-CSS-JS, Bootstrap 4 and FakeStore A
 Website: https://ayrov.github.io/Online-Store-Website-Demo/index.html
 
 Features-Notes:
-
   -Fully responsive website, works on all platforms.
   -Searchbar searches products that includes the searched string in their names.
   -Price Increasing-Decreasing Filter works perfectly but some bugs still exists in Price Range Filter.
