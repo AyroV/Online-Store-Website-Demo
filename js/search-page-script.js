@@ -40,7 +40,7 @@ fetch('https://fakestoreapi.com/products')
                         productHtml = insertProperty(productHtml, "id", relatedItems[i].id);
                         productHtml = insertProperty(productHtml, "name", relatedItems[i].title);
                         productHtml = insertProperty(productHtml, "page-html", relatedItems[i].title);
-                        productHtml = insertProperty(productHtml, "price", relatedItems[i].price.toPrecision(4));
+                        productHtml = insertProperty(productHtml, "price", relatedItems[i].price.toFixed(2));
                         productHtml = insertProperty(productHtml, "image", relatedItems[i].image);
 
                         if(productList === undefined) {
@@ -277,7 +277,7 @@ function updatePorductList() {
                     productHtml = insertProperty(productHtml, "id", relatedItems[i].id);
                     productHtml = insertProperty(productHtml, "name", relatedItems[i].title);
                     productHtml = insertProperty(productHtml, "page-html", relatedItems[i].title);
-                    productHtml = insertProperty(productHtml, "price", relatedItems[i].price.toPrecision(4));
+                    productHtml = insertProperty(productHtml, "price", relatedItems[i].price.toFixed(2));
                     productHtml = insertProperty(productHtml, "image", relatedItems[i].image);
 
                     if(productList === undefined) {

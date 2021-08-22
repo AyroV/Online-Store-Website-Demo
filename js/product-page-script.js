@@ -12,7 +12,7 @@
 
             var element = document.getElementById("cart-list");
             data = insertProperty(data, "name", name);
-            data = insertProperty(data, "price", price.toPrecision(4));
+            data = insertProperty(data, "price", price.toFixed(2));
             data = insertProperty(data, "image", image);
             data = insertProperty(data, "cart-id", cartItemCount);
 
@@ -39,7 +39,7 @@ fetch(fetchURL)
                 productPageHTML = insertProperty(productPageHTML, "image", data.image);
                 productPageHTML = insertProperty(productPageHTML, "id", data.id);
                 productPageHTML = insertProperty(productPageHTML, "name", data.title);
-                productPageHTML = insertProperty(productPageHTML, "price", data.price.toPrecision(4));
+                productPageHTML = insertProperty(productPageHTML, "price", data.price.toFixed(2));
 
                 insertHtml("#main-content", productPageHTML);
             })
