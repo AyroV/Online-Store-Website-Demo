@@ -25,7 +25,7 @@ fetch('https://fakestoreapi.com/products')
                     productHtml = insertProperty(productHtml, "id", data[i].id);
                     productHtml = insertProperty(productHtml, "name", data[i].title);
                     productHtml = insertProperty(productHtml, "page-html", data[i].title);
-                    productHtml = insertProperty(productHtml, "price", data[i].price);
+                    productHtml = insertProperty(productHtml, "price", data[i].price.toPrecision(4));
                     productHtml = insertProperty(productHtml, "image", data[i].image);
                     if(productList === undefined) {
                         productList = productHtml;
@@ -57,7 +57,7 @@ fetch('https://fakestoreapi.com/products')
                             productHtml = insertProperty(productHtml, "id", data[i].id);
                             productHtml = insertProperty(productHtml, "name", data[i].title);
                             productHtml = insertProperty(productHtml, "page-html", data[i].title);
-                            productHtml = insertProperty(productHtml, "price", data[i].price);
+                            productHtml = insertProperty(productHtml, "price", data[i].price.toPrecision(4));
                             productHtml = insertProperty(productHtml, "image", data[i].image);
                             var newCell = makeProductSliderCell(productHtml);
                             productSlider.insert(newCell);

@@ -39,7 +39,7 @@ function loadCart() {
             for(var i = 0; i < cartItemCount; i++) {
                 imageString = cartItems[i][2];
                 tempData = insertProperty(tempData, "name", cartItems[i][0]);
-                tempData = insertProperty(tempData, "price", cartItems[i][1]);
+                tempData = insertProperty(tempData, "price", cartItems[i][1].toPrecision(4));
                 tempData = insertProperty(tempData, "image", imageString);
                 tempData = insertProperty(tempData, "cart-id", i+1);
                 element.innerHTML += tempData;
