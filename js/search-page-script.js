@@ -1,4 +1,7 @@
 var searchString = sessionStorage.getItem("searchbarValue");
+var searchType = sessionStorage.getItem("searchType");
+sessionStorage.removeItem("searchType");
+sessionStorage.removeItem("searchbarValue");
 
 var relatedItems = new Array();
 var tempRelatedItems = new Array();
@@ -19,11 +22,11 @@ fetch('https://fakestoreapi.com/products')
 
                     else {
                         for(var i = 0; i < data.length; i++) {
-                            if(data[i].title.includes(searchString)) {
+                            if(data[i].title.includes(searchString) && searchType != "category") {
                                 relatedItems.push(data[i]);
                             }
     
-                            else if(data[i].category.includes(searchString)) {
+                            else if(data[i].category.includes(searchString) && searchType == "category") {
                                 relatedItems.push(data[i]);
                             }
                         }
@@ -60,8 +63,6 @@ fetch('https://fakestoreapi.com/products')
                     }
                 })
         })
-      
-//localStorage.removeItem("searchbarValue");
 
 var insertHtml = function (selector, html) {
     var targetElem = document.querySelector(selector);

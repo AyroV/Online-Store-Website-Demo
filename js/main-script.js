@@ -82,6 +82,7 @@ input.addEventListener("keyup", function(event) {
 
 function categoryClick(category) {
     sessionStorage.setItem("searchbarValue", category);
+    sessionStorage.setItem("searchType", "category");
     document.location.href = "https://ayrov.github.io/Online-Store-Website-Demo/search-page.html";
 }
 

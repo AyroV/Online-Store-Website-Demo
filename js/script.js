@@ -110,18 +110,18 @@ input.addEventListener("keyup", function(event) {
   }
 });
 
-function categoryClick(category) {
-    sessionStorage.setItem("searchbarValue", category);
-    document.location.href = "../search-page.html";
-}
+// function categoryClick(category) {
+//     sessionStorage.setItem("searchbarValue", category);
+//     document.location.href = "../search-page.html";
+// }
 
-function searchbar(searchbarID) {
-    var searchBar = document.getElementById(searchbarID);
-    var searchString = searchBar.value;
+// function searchbar(searchbarID) {
+//     var searchBar = document.getElementById(searchbarID);
+//     var searchString = searchBar.value;
 
-    sessionStorage.setItem("searchbarValue", searchString);
-    document.location.href = "../search-page.html";
-}
+//     sessionStorage.setItem("searchbarValue", searchString);
+//     document.location.href = "../search-page.html";
+// }
 
 function loadProductPage(productID) {
     var productLink = 'https://fakestoreapi.com/products/' + productID;
