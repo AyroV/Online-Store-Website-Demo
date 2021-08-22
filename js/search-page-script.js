@@ -1,7 +1,7 @@
 var searchString = sessionStorage.getItem("searchbarValue");
 var searchType = sessionStorage.getItem("searchType");
 sessionStorage.removeItem("searchType");
-sessionStorage.removeItem("searchbarValue");
+sessionStorage.setItem("searchbarValue", "");
 
 var relatedItems = new Array();
 var tempRelatedItems = new Array();
@@ -26,7 +26,7 @@ fetch('https://fakestoreapi.com/products')
                                 relatedItems.push(data[i]);
                             }
     
-                            else if(data[i].category.includes(searchString) && searchType == "category") {
+                            else if(data[i].category == searchString && searchType == "category") {
                                 relatedItems.push(data[i]);
                             }
                         }
