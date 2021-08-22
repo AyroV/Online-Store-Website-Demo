@@ -29,7 +29,7 @@ for(var i = 0; i < cartValues.length; i++){
 }
 
 function loadCart() {
-    fetch("../snippets/cart-items-snippet.html")
+    fetch("https://ayrov.github.io/Online-Store-Website-Demo/snippets/cart-items-snippet.html")
         .then(resp=>resp.text())
         .then(function(data) {
             var element = document.getElementById("cart-list");
@@ -37,7 +37,7 @@ function loadCart() {
 
             var tempData = data;
             for(var i = 0; i < cartItemCount; i++) {
-                imageString = 'https://' + cartItems[i][2];
+                imageString = cartItems[i][2];
                 tempData = insertProperty(tempData, "name", cartItems[i][0]);
                 tempData = insertProperty(tempData, "price", cartItems[i][1]);
                 tempData = insertProperty(tempData, "image", imageString);
@@ -54,7 +54,7 @@ function loadCart() {
 
 
 function add(name, price, image) {
-    fetch("../snippets/cart-items-snippet.html")
+    fetch("https://ayrov.github.io/Online-Store-Website-Demo/snippets/cart-items-snippet.html")
         .then(resp=>resp.text())
         .then(function(data) {
             var value = parseFloat(price);
@@ -129,7 +129,7 @@ function loadProductPage(productID) {
     fetch(productLink)
             .then(res=>res.json())
             .then(function (data) {
-                fetch("snippets/product-page-snippet.html")
+                fetch("https://ayrov.github.io/Online-Store-Website-Demo/snippets/product-page-snippet.html")
                     .then(resp=>resp.text())
                     .then(function(productHtml) {
                         productHtml = insertProperty(productHtml, "id", data.id);
@@ -168,7 +168,7 @@ function makeProductSliderCell(cellHTML) {
 fetch('https://fakestoreapi.com/products')
     .then(res=>res.json())
     .then(function (data) {
-        fetch("snippets/product-snippet.html")
+        fetch("https://ayrov.github.io/Online-Store-Website-Demo/snippets/product-snippet.html")
             .then(resp=>resp.text())
             .then(function(productHtml) {
                 var tempHtml = productHtml;
@@ -201,7 +201,7 @@ var productSlider = new Flickity(document.getElementById('product-carousel'));
 fetch('https://fakestoreapi.com/products')
             .then(res=>res.json())
             .then(function (data) {
-                fetch("snippets/product-on-slider-snippet.html")
+                fetch("https://ayrov.github.io/Online-Store-Website-Demo/snippets/product-on-slider-snippet.html")
                     .then(resp=>resp.text())
                     .then(function(productHtml) {
                         var tempHtml = productHtml;

@@ -11,10 +11,9 @@
             sessionStorage.setItem("cartValue", cartTotal.toString());
 
             var element = document.getElementById("cart-list");
-            var imageString = 'https://' + image;
             data = insertProperty(data, "name", name);
             data = insertProperty(data, "price", price);
-            data = insertProperty(data, "image", imageString);
+            data = insertProperty(data, "image", image);
             data = insertProperty(data, "cart-id", cartItemCount);
 
             element.innerHTML += data;
@@ -24,6 +23,27 @@
             }
         })
 }
+
+var query = window.location.search;
+if(!query.includes("?id="))
+    window.location.href = 'https://ayrov.github.io/Online-Store-Website-Demo/index.html';
+var productID = query.split("=")[1];
+
+var fetchURL = 'https://fakestoreapi.com/products' + '/' + productID;
+fetch(fetchURL)
+    .then(res=>res.json())
+    .then(data=>{
+        fetch("https://ayrov.github.io/Online-Store-Website-Demo/snippets/product-page-snippet.html")
+            .then(resp=>resp.text())
+            .then(productPageHTML=> {
+                productPageHTML = insertProperty(productPageHTML, "image", data.image);
+                productPageHTML = insertProperty(productPageHTML, "id", data.id);
+                productPageHTML = insertProperty(productPageHTML, "name", data.title);
+                productPageHTML = insertProperty(productPageHTML, "price", data.price);
+
+                insertHtml("#main-content", productPageHTML);
+            })
+    })
 
 var insertHtml = function (selector, html) {
     var targetElem = document.querySelector(selector);

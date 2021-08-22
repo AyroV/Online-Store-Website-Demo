@@ -1,7 +1,7 @@
 ﻿<div class="row product-detail-page">
     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
         <div class="product-detail-image">
-            <div class="product-big-image center-image"><img src="{{image}}" width="300px" height="300px"></div>
+            <div class="product-big-image center-image"><img class="product-image-big" src="{{image}}" width="300px" height="300px"></div>
         </div>
     </div>
 
@@ -10,10 +10,10 @@
                 <div class="product-code">{{id}}</div>
                 <div class="product-name">{{name}}</div>
                 <div class="product-price">
-                    <span class="price-value">{{price}}</span>
+                    <span class="price-value" id="product-price-value">{{price}}</span>
                     <span class="price-currency">$</span>
                 </div>
-                <button type="button" class="btn btn-danger add-cart-btn" onclick="addCart()">Add to Cart <img src="images/cart4.svg"></button>
+                <button type="button" class="btn btn-danger add-cart-btn" onclick="add(document.getElementsByClassName('product-name')[0].innerHTML, document.getElementById('product-price-value').innerHTML, document.getElementsByClassName('product-image-big')[0].src)">Add to Cart <img src="images/cart4.svg"></button>
         </div>
     </div>
 </div>

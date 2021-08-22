@@ -12,13 +12,13 @@ function makeProductSliderCell(cellHTML) {
 
 function categoryClick(category) {
     sessionStorage.setItem("searchbarValue", category);
-    document.location.href = "../Online-Store-Website-Demo/search-page.html";
+    document.location.href = "https://ayrov.github.io/Online-Store-Website-Demo/search-page.html";
 }
 
 fetch('https://fakestoreapi.com/products')
     .then(res=>res.json())
     .then(function (data) {
-        fetch("snippets/product-snippet.html")
+        fetch("https://ayrov.github.io/Online-Store-Website-Demo/snippets/product-snippet.html")
             .then(resp=>resp.text())
             .then(function(productHtml) {
                 var tempHtml = productHtml;
@@ -51,7 +51,7 @@ var productSlider = new Flickity(document.getElementById('product-carousel'));
 fetch('https://fakestoreapi.com/products')
             .then(res=>res.json())
             .then(function (data) {
-                fetch("snippets/product-on-slider-snippet.html")
+                fetch("https://ayrov.github.io/Online-Store-Website-Demo/snippets/product-on-slider-snippet.html")
                     .then(resp=>resp.text())
                     .then(function(productHtml) {
                         var tempHtml = productHtml;
