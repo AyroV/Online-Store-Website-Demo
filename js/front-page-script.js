@@ -10,13 +10,6 @@ function makeProductSliderCell(cellHTML) {
     return cell;
 }
 
-// function categoryClick(category) {
-//     sessionStorage.setItem("searchbarValue", category);
-//     sessionStorage.setItem("searchType", "category");
-//     alert("Hello! I am an alert box!!");
-//     document.location.href = "search-page.html";
-// }
-
 fetch('https://fakestoreapi.com/products')
     .then(res=>res.json())
     .then(function (data) {

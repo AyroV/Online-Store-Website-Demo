@@ -220,7 +220,7 @@ function filterPriceRange(priceRange, checkbox) {
     }
 
     if(priceRangeItems.length == 0) {
-        relatedItems = JSON.parse(JSON.stringify(tempRelatedItems));
+        relatedItems = new Array();
     }
 
     else {
@@ -268,21 +268,27 @@ function updatePorductList() {
         .then(function(productHtml) {
             var tempHtml = productHtml;
             var productList;
-            for(var i = 0; i < relatedItems.length; i++) {
-                productHtml = insertProperty(productHtml, "id", relatedItems[i].id);
-                productHtml = insertProperty(productHtml, "name", relatedItems[i].title);
-                productHtml = insertProperty(productHtml, "page-html", relatedItems[i].title);
-                productHtml = insertProperty(productHtml, "price", relatedItems[i].price);
-                productHtml = insertProperty(productHtml, "image", relatedItems[i].image);
+            if(relatedItems.length == 0) {
+                productList = "Not Found Based On Search Parameters";
+            }
 
-                if(productList === undefined) {
-                    productList = productHtml;
-                }
+            else {
+                for(var i = 0; i < relatedItems.length; i++) {
+                    productHtml = insertProperty(productHtml, "id", relatedItems[i].id);
+                    productHtml = insertProperty(productHtml, "name", relatedItems[i].title);
+                    productHtml = insertProperty(productHtml, "page-html", relatedItems[i].title);
+                    productHtml = insertProperty(productHtml, "price", relatedItems[i].price);
+                    productHtml = insertProperty(productHtml, "image", relatedItems[i].image);
 
-                else {
-                    productList += productHtml;
+                    if(productList === undefined) {
+                        productList = productHtml;
+                    }
+
+                    else {
+                        productList += productHtml;
+                    }
+                    productHtml = tempHtml;
                 }
-                productHtml = tempHtml;
             }
 
             insertHtml("#search-page-list", productList);
